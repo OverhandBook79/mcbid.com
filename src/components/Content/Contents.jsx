@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Image, Text, VStack } from '@chakra-ui/react';
+import { Avatar, Flex, Image, Text, VStack } from '@chakra-ui/react';
 
 const Contents = () => {
   return (
@@ -7,7 +7,7 @@ const Contents = () => {
       <VStack alignItems={'left'}> 
         <Image src='/post.png'/>
         <Flex gap={2}>
-        <Image borderRadius='full' boxSize='40px' src='/google.png' alt="Profile" />
+        <Avatar name='Dan Abrahmov' src='https://bit.ly/dan-abramov' />
         <VStack alignItems={'left'} gap={0}>
         <Text fontSize={14} fontWeight={"bold"}>Tutorial membuat bom atom</Text>
         <Flex gap={1}>
