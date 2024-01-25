@@ -1,8 +1,15 @@
-import { Box } from "@chakra-ui/react";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage/HomePage";
+import AuthPage from "./pages/AuthPage/AuthPage";
+import ProfilePage from "./pages/ProfilePage/ProfilePage";
 
 function App() {
   return <>
-  <Box bgColor={'black'} p={4} py={4} w={'100%'}>kalian semua kayak kontol</Box>
+  <Routes>
+    <Route path='/' element={<HomePage />} />
+    <Route path='/auth' element={<AuthPage />} />
+    <Route path='/profile' element={<ProfilePage />} />
+  </Routes>
   </>;
 }
 
