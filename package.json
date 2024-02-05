@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://overhandbook79.github.io/mcbid.com/",
+  "predeploy": "npm run build",
   "scripts": {
-    "predeploy": "npm run build",
     "deploy" : "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
