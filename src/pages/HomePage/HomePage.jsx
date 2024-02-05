@@ -1,8 +1,8 @@
-import PageLayout from "../../Layouts/PageLayout/PageLayout";
+import PageLayout1 from "../../Layouts/PageLayout/PageLayout1";
 
 const HomePage = () => {
   return (
-    <PageLayout />
+    <PageLayout1 />
   );
 };
 

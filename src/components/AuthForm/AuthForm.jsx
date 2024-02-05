@@ -1,10 +1,11 @@
-import { Box, Button, Flex, Image, Input, VStack, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Input, VStack, Text, useToast } from "@chakra-ui/react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const AuthForm = () => {
     const [isLogin, setIsLogin] = useState(true);
     const navigate = useNavigate();
+    const toast = useToast()
     const [inputs, setInputs] = useState({
         username:'',
         email:'',
@@ -13,11 +14,25 @@ const AuthForm = () => {
     });
     const handleAuth = () => {
         if (!inputs.username || !inputs.email || !inputs.password) {
-            alert("Please fill all the feilds");
+            toast({
+                title: "Failed",
+                description: "Please fill all the blank",
+                status: "error",
+                duration: 5000,
+                isClosable: true,
+                position: "bottom-right",
+            })
             return
         };
         if (inputs.username || inputs.email || inputs.password) {
-            alert("Your account will be saved");
+            toast({
+                title: "Success",
+                description: "Your account will be saved",
+                status: "success",
+                duration: 5000,
+                isClosable: true,
+                position: "bottom-right",
+              })
             navigate("/");
         };
         
@@ -67,7 +82,7 @@ const AuthForm = () => {
             <Flex cursor={"pointer"} alignItems={"center"}>
                 <Image src="/google.png" w={5} alt="Google Logo"/>
                 <Text mx='2' color={'blue.500'}>
-                    Sign In/Sign Up with Google
+                {isLogin ? "Sign In with Google" : "Sign Up with Google"}
                 </Text>
             </Flex>
         </VStack>
