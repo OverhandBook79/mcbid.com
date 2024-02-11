@@ -5,13 +5,13 @@ import CreationForm from '../../components/CreationForm/CreationForm';
 
 const UploadPage = () => {
   return (
-    <Flex p={2} width={"fit-content"}>
-    <VStack>
+    <>
+    <Flex direction={'column'} p={2}>
     <TopBar/>
     <CreationForm/>
     <BottomBar/>
-    </VStack>
     </Flex>
+    </>
   )
 }
 

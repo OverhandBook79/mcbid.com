@@ -2,7 +2,7 @@ import { Avatar, Box, Button, Flex, Text, VStack } from '@chakra-ui/react'
 import { useState } from 'react'
 import BottomBar from "../../components/BottomBar/BottomBar";
 import TopBar from "../../components/TopBar/TopBar";
-import Sidebar1 from "../../components/Sidebar/Sidebar1";
+
 
 const ProfilePage = () => {
   const [isFollow, setIsFollow] = useState(true);

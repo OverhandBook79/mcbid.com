@@ -8,7 +8,7 @@ const AuthPage = () => {
       <Container maxW={"container.md"} padding={0}>
         <Flex justifyContent={"center"} alignItems={"center"} gap={10}>
         {/* Gambar ada di kiri */}
-        <Box display={{base:"none",md:"block"}}>
+        <Box display={{base:"none", md:"block"}}>
           <Image src="/auth.png" alt="join us" h={490} borderRadius={10} />
         </Box>
         {/* Kolom buat Login/Logup */}

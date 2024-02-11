@@ -1,23 +1,25 @@
-import React from 'react';
-import { Avatar, Flex, Image, Text, VStack } from '@chakra-ui/react';
+import { Flex,  Text, VStack } from "@chakra-ui/react";
+import Content from "./Content";
 
-const Contents = () => {
+const Contents = ({categoryicon, category}) => {
   return (
-    <Flex border={'1px gray solid'} p={2}>
-      <VStack alignItems={'left'}> 
-        <Image src='/post.png'/>
-        <Flex gap={2}>
-        <Avatar name='OverhandBook79' src='https://yt3.googleusercontent.com/piAc1Hrdo5vQw0UhedE75STdAK9wUr_3-R6lcfiMQWpzutxL1cOEvW-rtixy9z6MbBEFVHd22g=s176-c-k-c0x00ffffff-no-rj' />
-        <VStack alignItems={'left'} gap={0}>
-        <Text fontSize={16} fontWeight={"bold"}>Tutorial membuat bom atom</Text>
-        <Flex gap={1}>
-        <Text fontSize={14}>72</Text>
-        <Text fontSize={14}>Views</Text>
+    <VStack>
+      <Flex justifyContent={"left"} w={"full"}> 
+        <Flex align={"center"} gap={1} >
+          {categoryicon}
+          {category}
         </Flex>
-        </VStack>
-        </Flex>
-      </VStack>
-    </Flex>
+      </Flex>
+      <Flex 
+        gap={1}
+        overflowX="auto"
+      >
+        <Content img='/pic1.png' avatar='' title='CC201' date='kemaren' username='Jions 1080HD'/>
+        <Content img='/pic2.png' avatar='' title='CC205' date='hari ini' username='VX Craft'/>
+        <Content img='/pic4.png' avatar='' title='Papan Stasiun' date='3 bulan lalu' username='OverhandBook79'/>
+        <Content img='/pic3.png' avatar='' title='CC206' date='2 tahun lalu' username='RF Craft'/>
+      </Flex>
+    </VStack>
   );
 };
 
